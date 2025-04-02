@@ -1,0 +1,84 @@
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #fff9f0;
+    color: #4b2e2e;
+    padding: 40px;
+    line-height: 1.7;
+}
+.typewriter-container {
+    display: flex;
+    justify-content: center;
+}
+.typewriter {
+    font-size: 24px;
+    max-width: 600px;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 5px;
+    letter-spacing: .1em;
+    animation: typing 4s steps(40, end) forwards;
+    position: relative;
+}
+
+.typewriter::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #4b2e2e;
+    animation: blink 0.75s step-end infinite, hideCaret 0s 4s forwards;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0 }
+    50% { opacity: 1 }
+}
+
+@keyframes hideCaret {
+    to { display: none }
+}
+.letter {
+    margin-top: 50px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.signature {
+    margin-top: 60px;
+    font-size: 22px;
+    text-align: right;
+    font-family: 'Georgia', serif;
+}
+.animate-signature {
+    display: inline-block;
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 5px;
+    animation: write-name 4s steps(30, end) forwards,
+}
+
+@keyframes hide-caret {
+    to {
+        border-right: none;
+    }
+}
+@keyframes write-name {
+    from { width: 0 }
+    to { width: 100% }
+}
+.footer {
+    margin-top: 50px;
+    font-style: italic;
+    text-align: center;
+}
